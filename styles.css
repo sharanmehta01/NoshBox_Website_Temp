@@ -418,46 +418,176 @@ footer {
     width: auto;
 }
 
-/* Partnership Section */
+/* Enhanced Partnership Section for Restaurants */
 .partnership {
     padding: 5rem 0;
     background: var(--light-bg);
     color: var(--text-color);
 }
 
+.partnership-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.solution-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.solution-header h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
 .partnership-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
     margin-top: 2rem;
 }
 
 .partnership-card {
     background: var(--white);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 15px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .partnership-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
-.partnership-card i {
+.card-icon {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    height: 80px;
+    width: 80px;
+    background: rgba(248, 68, 79, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
 }
 
 .partnership-card h3 {
     margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
 }
 
 .partnership-card p {
     text-align: center;
+    margin: 0 auto 1.5rem;
+    flex-grow: 1;
+}
+
+.card-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.card-feature span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.card-feature i {
+    color: var(--accent-color);
+}
+
+/* Business Results Section */
+.business-results {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.business-results h3 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.results-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 900px;
+}
+
+.result-stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Partner CTA */
+.partner-cta {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.business-cta-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(248, 68, 79, 0.3);
+}
+
+.business-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(248, 68, 79, 0.4);
+    background: #e03841;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .results-grid {
+        gap: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .partnership-card {
+        padding: 2rem;
+    }
 }
 
 /* Responsive Design */
