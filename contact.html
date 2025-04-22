@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NoshBox</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="inner-page">
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="NoshBox Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="partnership.html">Partner With Us</a></li>
+            <li><a href="join-us.html">Join Our Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Have questions or want to join? We'd love to hear from you!</p>
+        </div>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>Contact Us</h3>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdeK2B-Qy79OnWYsp-8jqbdeDAbqng4GiDyLJKIJPxwpHewPQ/formResponse" method="POST" target="_blank" id="contactForm">
+                        <input type="text" name="entry.1415367138" placeholder="Name" required>
+                        <input type="email" name="entry.1693220812" placeholder="Email" required>
+                        <textarea name="entry.892902136" placeholder="Message" id="messageField" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="NoshBox Logo">
+            </div>
+            <p>&copy; 2025 NoshBox. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // When the page loads, check for message parameter
+        window.onload = function() {
+            var messageType = getUrlParameter('type');
+            var messageField = document.getElementById('messageField');
+            
+            if (messageType === 'waitlist') {
+                messageField.value = "I'd like to join the NoshBox app launch waitlist!";
+            } else if (messageType === 'partner') {
+                messageField.value = "I want to join NoshBox as a partner!";
+            }
+        }
+    </script>
+</body>
+</html> 
