@@ -1133,12 +1133,18 @@ body:not(.home) .video-section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
 }
 
-.video-container video {
-    display: block;
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    border: 0;
 }
 
 /* Section padding for non-home pages */
