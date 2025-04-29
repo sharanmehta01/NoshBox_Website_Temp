@@ -1520,3 +1520,19 @@ body:not(.home) .video-section {
 .no-scroll {
     overflow: hidden;
 }
+
+.video-fallback {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.video-fallback a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.video-fallback a:hover {
+    color: var(--text-color);
+}
